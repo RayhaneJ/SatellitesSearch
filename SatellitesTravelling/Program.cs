@@ -41,8 +41,8 @@ namespace Satellites
             ns.Add("", "http://www.opengis.net/kml/2.1");
 
             using (Stream reader = new FileStream("doc.kml", FileMode.Open))
-            kml = (Kml)new XmlSerializer(typeof(Kml)).Deserialize(reader);
-            
+                kml = (Kml)new XmlSerializer(typeof(Kml)).Deserialize(reader);
+
             kml.Document.Folder.ForEach(f => continentsMenu.Add(f.Name, () => ShowLaunchStations(f.Name, args)));
             continentsMenu.Show();
 
@@ -79,8 +79,11 @@ namespace Satellites
         {
             Localisation localisation = kml.Document.Folder
                 .SelectMany(f => f.Placemark.Where(p => p.Name == launchStation)
-                .Select(p => new Localisation { Latitude = Convert.ToDouble(p.Point.Coordinates.Split(',').ElementAt(0)), 
-                    Longitude = Convert.ToDouble(p.Point.Coordinates.Split(',').ElementAt(1)) })).FirstOrDefault();
+                .Select(p => new Localisation
+                {
+                    Latitude = Convert.ToDouble(p.Point.Coordinates.Split(',').ElementAt(0)),
+                    Longitude = Convert.ToDouble(p.Point.Coordinates.Split(',').ElementAt(1))
+                })).FirstOrDefault();
 
             HttpClient httpClient = new();
             var response = httpClient
@@ -107,15 +110,18 @@ namespace Satellites
 
         private static void FindShortestPath()
         {
-            CloseAndClearMenus();
+            if (satellites.Count > 3)
+            {
+                CloseAndClearMenus();
 
-            var edges = PopulateEdgesFromSatellites();
+                var edges = PopulateEdgesFromSatellites();
 
-            List<int> vertices = satellites.Select(s => s.Id).ToList();
-            List<Edge> MinimumSpanningTree = Kruskal.Kruskals_MST(edges, vertices);
+                List<int> vertices = satellites.Select(s => s.Id).ToList();
+                List<Edge> MinimumSpanningTree = Kruskal.Kruskals_MST(edges, vertices);
 
-            UndirectedGraph<int, UndirectedEdge<int>> graph = CreateGraphFromTree(vertices, MinimumSpanningTree);
-            RunDFS(graph);
+                UndirectedGraph<int, UndirectedEdge<int>> graph = CreateGraphFromTree(vertices, MinimumSpanningTree);
+                RunDFS(graph);
+            }
         }
 
         private static void CloseAndClearMenus()
@@ -154,19 +160,16 @@ namespace Satellites
 
             List<Edge> edges = new();
 
-            if (satellites.Count > 2)
+            foreach (var s1 in satellites)
             {
-                foreach (var s1 in satellites)
+                foreach (var s2 in satellites.Except(new List<Satellite> { s1 }))
                 {
-                    foreach (var s2 in satellites.Except(new List<Satellite> { s1 }))
-                    {
-                        GeoCoordinate g1 = new(s1.Latitude, s1.Longitude, s1.Altitude);
-                        GeoCoordinate g2 = new(s2.Latitude, s2.Longitude, s2.Altitude);
+                    GeoCoordinate g1 = new(s1.Latitude, s1.Longitude, s1.Altitude);
+                    GeoCoordinate g2 = new(s2.Latitude, s2.Longitude, s2.Altitude);
 
-                        //On test si la liste continent déja cet arc 
-                        if (!edges.Any(e => e.Vertex1 == s2.Id && e.Vertex2 == s1.Id && e.Weight == g1.GetDistanceTo(g2)))
-                            edges.Add(new Edge { Vertex1 = s1.Id, Vertex2 = s2.Id, Weight = g1.GetDistanceTo(g2) });
-                    }
+                    //On test si la liste continent déja cet arc 
+                    if (!edges.Any(e => e.Vertex1 == s2.Id && e.Vertex2 == s1.Id && e.Weight == g1.GetDistanceTo(g2)))
+                        edges.Add(new Edge { Vertex1 = s1.Id, Vertex2 = s2.Id, Weight = g1.GetDistanceTo(g2) });
                 }
             }
 
@@ -191,7 +194,7 @@ namespace Satellites
             dfs.Compute(0);
         }
 
-        private static void DfsTreeEdge(object sender, UndirectedEdgeEventArgs<int, UndirectedEdge<int>> e) 
+        private static void DfsTreeEdge(object sender, UndirectedEdgeEventArgs<int, UndirectedEdge<int>> e)
             => vertex.Add(e.Target);
 
         private static void InitializeMenu(string[] args)

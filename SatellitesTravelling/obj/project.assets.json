@@ -14,6 +14,23 @@
           "lib/netstandard1.3/ConsoleMenu.dll": {}
         }
       },
+      "Costura.Fody/5.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "6.5.1",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Costura.dll": {}
+        },
+        "build": {
+          "build/Costura.Fody.props": {},
+          "build/Costura.Fody.targets": {}
+        }
+      },
       "EPPlus/5.6.3": {
         "type": "package",
         "dependencies": {
@@ -36,6 +53,12 @@
         },
         "runtime": {
           "lib/net5.0/EPPlus.dll": {}
+        }
+      },
+      "Fody/6.5.1": {
+        "type": "package",
+        "build": {
+          "build/Fody.targets": {}
         }
       },
       "GeoCoordinate.NetStandard1/1.0.1": {
@@ -1684,6 +1707,27 @@
         "lib/netstandard1.3/ConsoleMenu.dll"
       ]
     },
+    "Costura.Fody/5.3.0": {
+      "sha512": "fb04fy7bJ7dNV7u3Ys0yvuINePnICWSwzpmtRjvQKuOl9nm0xxccsk2B1U3mLMFFCrb1luSMyu6vp/YWFIZRqw==",
+      "type": "package",
+      "path": "costura.fody/5.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Costura.Fody.props",
+        "build/Costura.Fody.targets",
+        "costura.fody.5.3.0.nupkg.sha512",
+        "costura.fody.nuspec",
+        "icon.png",
+        "lib/netstandard1.0/Costura.dll",
+        "lib/netstandard1.0/Costura.pdb",
+        "lib/netstandard1.0/Costura.xml",
+        "netclassicweaver/Costura.Fody.dll",
+        "netclassicweaver/Costura.Fody.xcf",
+        "netstandardweaver/Costura.Fody.dll",
+        "netstandardweaver/Costura.Fody.xcf"
+      ]
+    },
     "EPPlus/5.6.3": {
       "sha512": "PVcv1luDwqjyXm2vUWogW7mjC6OoW88+SEYMFwrD+FfCXmHzVML/o4RWGFbMfgT/mSEmiTnzfYBC6VHCLl+bYw==",
       "type": "package",
@@ -1708,6 +1752,39 @@
         "lib/netstandard2.1/EPPlus.xml",
         "license.md",
         "readme.txt"
+      ]
+    },
+    "Fody/6.5.1": {
+      "sha512": "DEw9rPG5vrpaK4vPPze0f4q6Zd0mfzjGNKy49nrmINkftIHpkyf8KH+uC/qF8y6v1askPWu9NbJS9bkmN5wXaA==",
+      "type": "package",
+      "path": "fody/6.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/Fody.targets",
+        "fody.6.5.1.nupkg.sha512",
+        "fody.nuspec",
+        "netclassictask/Fody.dll",
+        "netclassictask/FodyCommon.dll",
+        "netclassictask/FodyHelpers.dll",
+        "netclassictask/FodyIsolated.dll",
+        "netclassictask/Mono.Cecil.Pdb.dll",
+        "netclassictask/Mono.Cecil.Pdb.pdb",
+        "netclassictask/Mono.Cecil.Rocks.dll",
+        "netclassictask/Mono.Cecil.Rocks.pdb",
+        "netclassictask/Mono.Cecil.dll",
+        "netclassictask/Mono.Cecil.pdb",
+        "netstandardtask/Fody.dll",
+        "netstandardtask/FodyCommon.dll",
+        "netstandardtask/FodyHelpers.dll",
+        "netstandardtask/FodyIsolated.dll",
+        "netstandardtask/Mono.Cecil.Pdb.dll",
+        "netstandardtask/Mono.Cecil.Pdb.pdb",
+        "netstandardtask/Mono.Cecil.Rocks.dll",
+        "netstandardtask/Mono.Cecil.Rocks.pdb",
+        "netstandardtask/Mono.Cecil.dll",
+        "netstandardtask/Mono.Cecil.pdb"
       ]
     },
     "GeoCoordinate.NetStandard1/1.0.1": {
@@ -5973,6 +6050,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "ConsoleMenu-simple >= 2.4.0",
+      "Costura.Fody >= 5.3.0",
       "DisjointSet >= 1.0.0",
       "EPPlus >= 5.6.3",
       "GeoCoordinate.NetStandard1 >= 1.0.1",
@@ -6032,6 +6110,12 @@
           "ConsoleMenu-simple": {
             "target": "Package",
             "version": "[2.4.0, )"
+          },
+          "Costura.Fody": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[5.3.0, )"
           },
           "EPPlus": {
             "target": "Package",

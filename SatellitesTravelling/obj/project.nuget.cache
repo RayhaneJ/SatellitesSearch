@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "A4o7cA0mhaYySh0inkpyA3iAPxr5euQUZ76eawBX7GBrBGyo697/azsCZ9KTfC69+y0xiPJvnJrgtzgTz29wmA==",
+  "dgSpecHash": "0YIcyrtnfBi7VxiMO/exXfRUqgAIVenunHDEvLFvsHzRAKCsc2Awp4Yic0BCoXwyWcDdVkkmDXFz9orwD48FOw==",
   "success": true,
   "projectFilePath": "C:\\Users\\rji8\\Documents\\Visual Studio 2019\\Projects\\SatellitesTravellingFinal\\SatellitesTravelling\\SatellitesTravelling.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rji8\\.nuget\\packages\\consolemenu-simple\\2.4.0\\consolemenu-simple.2.4.0.nupkg.sha512",
+    "C:\\Users\\rji8\\.nuget\\packages\\costura.fody\\5.3.0\\costura.fody.5.3.0.nupkg.sha512",
     "C:\\Users\\rji8\\.nuget\\packages\\epplus\\5.6.3\\epplus.5.6.3.nupkg.sha512",
+    "C:\\Users\\rji8\\.nuget\\packages\\fody\\6.5.1\\fody.6.5.1.nupkg.sha512",
     "C:\\Users\\rji8\\.nuget\\packages\\geocoordinate.netstandard1\\1.0.1\\geocoordinate.netstandard1.1.0.1.nupkg.sha512",
     "C:\\Users\\rji8\\.nuget\\packages\\linqtoexcel\\1.11.0\\linqtoexcel.1.11.0.nupkg.sha512",
     "C:\\Users\\rji8\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
