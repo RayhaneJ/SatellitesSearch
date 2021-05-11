@@ -100,7 +100,7 @@ namespace Satellites
                            });
             satellitesMenu.Add("Find Shortest Path -- [Select the satellites first]", () => FindShortestPath());
 
-            data.above.ForEach(a => satellitesMenu.Add(a.satname, () => SelectSatellite(a)));
+            data.above.Take(23).ToList().ForEach(a => satellitesMenu.Add(a.satname, () => SelectSatellite(a)));
 
             satellitesMenu.Show();
         }
