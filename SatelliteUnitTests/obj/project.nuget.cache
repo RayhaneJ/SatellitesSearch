@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gRFwPEfR0zRXle9baZR4Ha5RkC6dV9/EE9xHaMarY0ZFxXi7A/qAyAEHEganwcsR2M500oC4nvWT7B0owDVaTw==",
+  "dgSpecHash": "KInjQp11ust8MdY9weLt8j2WHul5R+5X9r7jdTq2VzaYZXqxJNk2cCnjQPKfj2Ppykt7Ffc45RctodeZtXRBoA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rji8\\Documents\\Visual Studio 2019\\Projects\\SatellitesTravellingFinal\\SatelliteUnitTests\\SatelliteUnitTests.csproj",
+  "projectFilePath": "C:\\Users\\rji8\\Documents\\Visual Studio 2019\\Projects\\SatellitesSearch\\SatelliteUnitTests\\SatelliteUnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rji8\\.nuget\\packages\\consolemenu-simple\\2.4.0\\consolemenu-simple.2.4.0.nupkg.sha512",
     "C:\\Users\\rji8\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",

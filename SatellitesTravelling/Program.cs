@@ -110,7 +110,7 @@ namespace Satellites
 
         private static void FindShortestPath()
         {
-            if (satellites.Count > 3)
+            if (satellites.Count > 2)
             {
                 CloseAndClearMenus();
 
