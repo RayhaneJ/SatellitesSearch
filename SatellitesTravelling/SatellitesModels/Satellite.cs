@@ -1,5 +1,4 @@
-﻿using Satellites;
-using Satellites.SatellitesModels;
+﻿using Satellites.SatellitesModels;
 
 namespace SatellitesTravelling.SatellitesModels
 {

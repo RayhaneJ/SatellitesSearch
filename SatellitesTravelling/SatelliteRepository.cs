@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using OfficeOpenXml;
-using SatellitesTravelling;
+
 using SatellitesTravelling.SatellitesModels;
 
 namespace SatellitesTravelling
@@ -25,7 +22,7 @@ namespace SatellitesTravelling
                 // J colonne dans la table
                 int j = 2;
 
-                int Id = i-2;
+                int Id = i - 2;
                 //i: ligne . j++ pour augmenter colonne à chaque fois 
                 string Satellite = workSheet.Cells[i, j++].Value.ToString();
 

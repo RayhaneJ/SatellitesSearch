@@ -1,24 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using System.Linq;
-using SatellitesTravelling;
-using System.Collections.Generic;
-using GeoCoordinatePortable;
-using QuickGraph.Algorithms.Search;
-using QuickGraph;
-using System.Data;
-using QuickGraph.Algorithms.Observers;
-using QuickGraph.Collections;
-using SatellitesTravelling.SatellitesModels;
-using System.Xml.Serialization;
-using SatellitesTravelling.LaunchSitesModels;
-using System.IO;
-using ConsoleTools;
-using Satellites.SatellitesModels;
 using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
+
+using ConsoleTools;
+
+using GeoCoordinatePortable;
+
+using QuickGraph;
+using QuickGraph.Algorithms.Search;
+
+using Satellites.SatellitesModels;
+
+using SatellitesTravelling;
+using SatellitesTravelling.LaunchSitesModels;
+using SatellitesTravelling.SatellitesModels;
 
 namespace Satellites
 {
