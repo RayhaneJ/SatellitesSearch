@@ -1,0 +1,15 @@
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\bin\Release\DisjointSet.dll.config
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\bin\Release\DisjointSet.dll
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\bin\Release\DisjointSet.pdb
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\bin\Release\GeoCoordinate.NetStandard1.dll
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\bin\Release\LinqToExcel.dll
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\bin\Release\Remotion.Data.Linq.dll
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\bin\Release\Remotion.dll
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\bin\Release\Remotion.Interfaces.dll
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\bin\Release\LinqToExcel.xml
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\obj\Release\DisjointSet.csprojAssemblyReference.cache
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\obj\Release\DisjointSet.csproj.CoreCompileInputs.cache
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\obj\Release\DisjointSet.csproj.CopyComplete
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\obj\Release\DisjointSet.dll
+C:\Users\rji8\Documents\Visual Studio 2019\Projects\SatellitesTravellingFinal\DisjointSet\obj\Release\DisjointSet.pdb

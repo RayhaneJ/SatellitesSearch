@@ -18,6 +18,7 @@ using SatellitesTravelling.LaunchSitesModels;
 using System.IO;
 using ConsoleTools;
 using Satellites.SatellitesModels;
+using System.Threading;
 
 namespace Satellites
 {
@@ -32,6 +33,8 @@ namespace Satellites
 
         static async Task Main(string[] args)
         {
+            Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
+
             InitializeMenu(args);
 
             XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
