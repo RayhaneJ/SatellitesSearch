@@ -71,7 +71,7 @@ namespace Satellites
                            });
 
             launchStationsMenu.Add("Retour", () => launchStationsMenu.CloseMenu());
-            launchStations.ForEach(s => launchStationsMenu.Add(s.Name, () => ShowSatellites(s.Name, args)));
+            launchStations.Take(20).ToList().ForEach(s => launchStationsMenu.Add(s.Name, () => ShowSatellites(s.Name, args)));
             launchStationsMenu.Show();
         }
 
@@ -100,7 +100,7 @@ namespace Satellites
                            });
             satellitesMenu.Add("Find Shortest Path -- [Select the satellites first]", () => FindShortestPath());
 
-            data.above.Take(23).ToList().ForEach(a => satellitesMenu.Add(a.satname, () => SelectSatellite(a)));
+            data.above.Take(20).ToList().ForEach(a => satellitesMenu.Add(a.satname, () => SelectSatellite(a)));
 
             satellitesMenu.Show();
         }
